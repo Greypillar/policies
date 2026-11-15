@@ -8,13 +8,14 @@ title: Control maps for AI
 summary: Where Greypillar stands against the NIST AI Risk Management Framework, the OWASP Top 10 for LLM applications and the ISO/IEC 42001 control list. A self-alignment, not an audit.
 banner: "{claim:status.public_service} Nobody has assessed this. Neither NIST nor OWASP certifies anyone."
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: Draft
   Effective: Not set
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not independently assessed.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "The gate rule is cited at /system (the docs are closed in public until the patent answer)."}
   - {version: "1.0", date: "14 November 2026", text: "First published draft."}
 sources:
   - {n: 1, text: "NIST, Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1, January 2023. NIST's page says a revision is in progress; no revised text had been published when we looked.", href: "https://www.nist.gov/itl/ai-risk-management-framework"}
@@ -56,7 +57,7 @@ Table: NIST AI RMF 1.0, GOVERN
 | GOVERN 2.2 Personnel trained on AI risk | The accountable role. No training programme. | None | Not yet |
 | GOVERN 2.3 Leadership takes responsibility | The founder decides and approves. The working rules are private and cannot be checked by readers. | Internal working rules (private repository) | Designed |
 | GOVERN 3.1 Diverse perspectives in decisions | Not claimed. | None | Not yet |
-| GOVERN 3.2 Human-AI roles and oversight set by policy | A person checks every brief before anything is sent. Nothing irreversible happens without a person's yes. Designed. | [System card](/trust/system-card); [Gate rule](/docs/gate-rule) | Designed |
+| GOVERN 3.2 Human-AI roles and oversight set by policy | A person checks every brief before anything is sent. Nothing irreversible happens without a person's yes. Designed. | [System card](/trust/system-card); [Gate rule](/system) | Designed |
 | GOVERN 4.1 Culture that weighs AI risk | A claims registry checked in the website's build keeps public statements true. That is one control. Culture is not measured. | Claims registry, checked in CI (private repository) | Not yet |
 | GOVERN 4.2 Teams document risks and impacts | Risks are written in design records. No impact assessment. | Design records (internal) | Not yet |
 | GOVERN 4.3 Practices for testing and incident sharing | Website code has automated tests. No AI testing or incident sharing. | The website's CI workflow (private repository) | Not yet |
@@ -142,9 +143,9 @@ Table: NIST AI RMF 1.0, MANAGE
 
 | Risk | What Greypillar designs | Evidence | Status |
 |---|---|---|---|
-| LLM01 Prompt injection | The visitor's words and file are untrusted. Agents are read-only, take no action in outside systems and send nothing. A person checks before anything leaves. Files are stored as received and never opened on the intake server; they are read in sandboxes on a separate server. The gate rule says free text is no fact. No red-team test has run. | [System card](/trust/system-card); [Gate rule](/docs/gate-rule); decision record (private) | Designed |
+| LLM01 Prompt injection | The visitor's words and file are untrusted. Agents are read-only, take no action in outside systems and send nothing. A person checks before anything leaves. Files are stored as received and never opened on the intake server; they are read in sandboxes on a separate server. The gate rule says free text is no fact. No red-team test has run. | [System card](/trust/system-card); [Gate rule](/system); decision record (private) | Designed |
 | LLM02 Sensitive information disclosure | An agent reads only the one request it is preparing. Model providers are restricted to those that do not train on inputs and keep no data. A retention rule is decided. Nothing is tested. | {claim:data_use.no_training_default}; decision record (private) | Designed |
-| LLM03 Excessive agency | No tools in outside systems. Read-only access to the intake. Past step 1, every effect must pass the gate rule and stay inside what was accepted. | [Gate rule](/docs/gate-rule); [System card](/trust/system-card) | Designed |
+| LLM03 Excessive agency | No tools in outside systems. Read-only access to the intake. Past step 1, every effect must pass the gate rule and stay inside what was accepted. | [Gate rule](/system); [System card](/trust/system-card) | Designed |
 | LLM04 Supply chain | Website dependencies are pinned and updated by weekly pull requests. The model route (OpenRouter and its providers) is chosen and not yet built. Not assessed. | Dependabot configuration (private repository); [Subprocessors](/trust/subprocessors) | Designed |
 | LLM05 Data and model poisoning | Greypillar does not train or fine-tune a model on visitor content. Step 1 has no retrieval corpus. Poisoned input is covered by LLM01. | {claim:data_use.no_training_default} | Designed |
 | LLM06 Unbounded consumption | One file per submission. A monthly spending limit per model key is designed for GP-run systems, and a public cost cap is a gate before Start opens. | Website plan and GP-run infrastructure design (private) | Designed |
@@ -176,10 +177,10 @@ Table: NIST AI RMF 1.0, MANAGE
 | A.5.4 Impact on individuals or groups | No assessment. The commitments rule out profiling people. | [Commitments](/commitments) | Not yet |
 | A.5.5 Societal impacts | None. | None | Not yet |
 | A.6.1.2 Objectives for responsible development | Written as commitments, draft. | [Commitments](/commitments) | Designed |
-| A.6.1.3 Processes for responsible design and development | A design method and the gate rule specification. Not an ISO process. | [Gate rule](/docs/gate-rule) | Designed |
-| A.6.2.2 AI system requirements and specification | The gate rule is specified, with its clauses and tests. | [Gate rule](/docs/gate-rule) | Designed |
+| A.6.1.3 Processes for responsible design and development | A design method and the gate rule specification. Not an ISO process. | [Gate rule](/system) | Designed |
+| A.6.2.2 AI system requirements and specification | The gate rule is specified, with its clauses and tests. | [Gate rule](/system) | Designed |
 | A.6.2.3 Design and development documentation | Specification and decision records. | Specification (internal) | Designed |
-| A.6.2.4 Verification and validation | The gate rule's tests run against a reference model in the specification, each with a seeded defect. No agent has been evaluated. | [Gate rule](/docs/gate-rule) | Designed |
+| A.6.2.4 Verification and validation | The gate rule's tests run against a reference model in the specification, each with a seeded defect. No agent has been evaluated. | [Gate rule](/system) | Designed |
 | A.6.2.5 AI system deployment | Nothing deployed. | None | Not yet |
 | A.6.2.6 AI system operation and monitoring | Nothing operating. | None | Not yet |
 | A.6.2.7 AI system technical documentation | The system card is a draft. | [System card](/trust/system-card) | Designed |

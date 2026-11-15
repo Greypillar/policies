@@ -8,13 +8,14 @@ title: CSA STAR Level 1 self-assessment
 summary: Greypillar's answers to the Cloud Security Alliance's 283-question CAIQ v4.1, written by Greypillar and not independently assessed. Most answers are Planned or No because there is no service yet.
 banner: "{claim:status.public_service} A draft self-assessment, labelled self-assessed. Not submitted to the CSA STAR Registry. Written by Greypillar. Not independently assessed."
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: Draft
   Effective: Not set
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not independently assessed.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "The gate rule is cited at /system (the docs are closed in public until the patent answer)."}
   - {version: "1.0", date: "14 November 2026", text: "First published draft."}
 sources:
   - {n: 1, text: "Cloud Security Alliance, STAR Level 1: Security Questionnaire (CAIQ v4.1), questionnaire version 4.1.0, specification Cloud Controls Matrix 4.1.1, page dated 27 January 2026", href: "https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4-1"}
@@ -111,7 +112,7 @@ Table: Answers by domain
 | AIS-06.2 | Deployment automated | No | Not claimed until the production deploy path is written down. |
 | AIS-07.1 | Vulnerabilities fixed by a defined process | No | Partly. Weekly Dependabot update pull requests are configured (see TVM-06.1). No written fix timelines. |
 | AIS-07.2 | Remediation automated where possible | No | Partly. Dependabot proposes updates; a person decides and merges. Next.js is pinned on purpose and its updates are a person's decision. |
-| AIS-08.1 | APIs secured by process and technical measures | Planned | The site has no customer API. The product's interface contract is specified and its reference pages stay closed until a first callable interface exists (/docs/gate-rule for the rule it must keep). |
+| AIS-08.1 | APIs secured by process and technical measures | Planned | The site has no customer API. The product's interface contract is specified and its reference pages stay closed until a first callable interface exists (/system for the rule it must keep). |
 | AIS-08.2 | API reviews yearly | Planned | Follows the first API. |
 
 ## 6 BCR: Business continuity and resilience {#bcr}
@@ -235,7 +236,7 @@ Table: Answers by domain
 | DSP-05.2 | Data flows reviewed yearly | Planned | Follows the first service. |
 | DSP-06.1 | Data ownership and stewardship documented | Planned | The privacy notice (version 1.0) names the controller and takes effect on the opening of greypillar.ai. |
 | DSP-06.2 | Stewardship reviewed yearly | Planned | Follows the notice. |
-| DSP-07.1 | Security by design in products | Planned | Designed - the gate rule, an intake that has no open port to the internet, files never opened on the intake server (/docs/gate-rule; decision record). Nothing running on 14 November 2026. |
+| DSP-07.1 | Security by design in products | Planned | Designed - the gate rule, an intake that has no open port to the internet, files never opened on the intake server (/system; decision record). Nothing running on 14 November 2026. |
 | DSP-08.1 | Privacy by design in products | Planned | Designed - cookieless aggregate analytics, replay only with consent, inputs masked, Start never recorded, no training on content. Not live. |
 | DSP-08.2 | Privacy settings default to protective | No | Partly. On 14 November 2026 the site sets no cookies (it keeps the visitor's light level in local storage), no analytics runs, and its content security policy sets form-action to none (response headers observed that day). These are absences, not a privacy-settings control. When analytics and Start open, the privacy notice (sections 5 and 6) sets their defaults: nothing stored without a yes, recording only with consent, Start never recorded. Evidence - the cookies page text. |
 | DSP-09.1 | Data protection impact assessment | No | None done. To be done before the first service takes personal data. |
@@ -302,7 +303,7 @@ Table: Answers by domain
 | IAM-02.1 | Credential and password policy | No | Not written. No decision to write it has been made. |
 | IAM-02.2 | Policy reviewed yearly | No | Not written. No decision to write it has been made. |
 | IAM-03.1 | Inventory of identities and their access | No | Not in place and not yet designed. |
-| IAM-04.1 | Separation of duties | No | The accountable role administers every account today. The product's gate separates who proposes from who accepts (/docs/gate-rule); that is designed, not running. |
+| IAM-04.1 | Separation of duties | No | The accountable role administers every account today. The product's gate separates who proposes from who accepts (/system); that is designed, not running. |
 | IAM-05.1 | Least privilege | Planned | Designed - secrets separated by project, services that read only their own, agents that cannot list secret values (GP-run infrastructure design, private; nothing deployed). Not deployed. |
 | IAM-06.1 | Access provisioning process | No | Not in place and not yet designed. |
 | IAM-07.1 | Timely removal or change of access | No | Not in place and not yet designed. |
@@ -310,7 +311,7 @@ Table: Answers by domain
 | IAM-09.1 | Privileged roles segregated | Planned | Designed (GP-run infrastructure design, private; nothing deployed). Not deployed. |
 | IAM-10.1 | Privileged access granted for limited time | Planned | Designed - privileged approvals expire and are single-use (GP-run infrastructure design, private; nothing deployed). Not deployed. |
 | IAM-10.2 | Privileged access not accumulated | Planned | Designed (GP-run infrastructure design, private; nothing deployed). Not deployed. |
-| IAM-11.1 | Customers join approval of high-risk privileged access | Planned | Designed - nothing irreversible without the customer's yes (/commitments, /docs/gate-rule). Not running. |
+| IAM-11.1 | Customers join approval of high-risk privileged access | Planned | Designed - nothing irreversible without the customer's yes (/commitments, /system). Not running. |
 | IAM-12.1 | Activity traceable to unique IDs | No | Not evidenced. |
 | IAM-13.1 | Strong authentication incl. multi-factor | No | Partly. Greypillar states that passkeys or two-factor sign-in are on Google Workspace, GitHub, Vercel and Cloudflare. This is Greypillar's own statement of 12 November 2026, not independently verified. Greypillar does not claim passkeys or two-factor sign-in on any other account. One role administers every account. |
 | IAM-13.2 | Certificates or equivalent for system identities | Planned | Designed - passkey (WebAuthn) signatures on approvals and a device identity for each system (GP-run infrastructure design, private; nothing deployed). Not deployed. |
@@ -322,7 +323,7 @@ Table: Answers by domain
 
 | Question | Short question | Answer | Evidence or note |
 |---|---|---|---|
-| IPY-01.1 | Policy for API communications | Planned | The product's interface contract is specified (/docs/gate-rule). No customer API exists. |
+| IPY-01.1 | Policy for API communications | Planned | The product's interface contract is specified (/system). No customer API exists. |
 | IPY-01.2 | Policy for processing interoperability | No | Not in place and not yet designed. |
 | IPY-01.3 | Policy for development portability | No | Not in place and not yet designed. |
 | IPY-01.4 | Policy for data exchange and portability | Planned | Commitment 4 (/commitments) - you leave with everything, in its native format. Planned, not in force. |
