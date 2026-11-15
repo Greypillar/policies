@@ -9,13 +9,14 @@ title: Cookies and browser storage
 summary: What greypillar.ai stores in your browser, why, for how long, and how to remove it. Without your yes, the site sets no cookies. Each section has its plain meaning in the margin. If the two differ, the clause governs.
 banner: ""
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: In force
   Effective: On the opening of greypillar.ai
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not yet reviewed by outside counsel.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "No analytics for visitors in the EU, the EEA, the UK and Switzerland (3.3, 4.4, 4.6)."}
   - {version: "1.0", date: "14 November 2026", text: "First published version, in force from the opening of greypillar.ai."}
 sources:
   - {n: 1, text: "PostHog, Controlling data collection: cookieless tracking and what each mode stores", href: "https://posthog.com/docs/privacy/data-collection"}
@@ -68,25 +69,25 @@ Table: What the site stores in your browser
 
 ## 3 Analytics, when switched on {#analytics status=planned until=opening}
 
-> In plain words: analytics is not switched on yet. When it is, visitors in Europe are asked first. Elsewhere we count pages without storing anything in your browser.
+> In plain words: analytics is not switched on yet. When it is, it will not run for visitors in Europe. Elsewhere we count pages without storing anything in your browser.
 
 3.1 Analytics is not switched on yet. When it is, PostHog will measure how the site is used while keeping its identifier only in the page's memory. It stores nothing in cookies, local storage or session storage, and every full page load starts a new identifier, so it counts pages and steps, not people[^1].
 
 3.2 This layer does not record your screen and does not identify you.
 
-3.3 If your network address is in the EU, the EEA, the UK or Switzerland, PostHog will load only after you say yes through the line the site shows. Before you answer, and if you say no, nothing is counted or recorded. If we cannot tell where you are, the site asks.
+3.3 If your network address is in the EU, the EEA, the UK or Switzerland, or we cannot tell where you are, we will run no analytics at all: PostHog does not load, nothing is counted or recorded, and the site does not ask.
 
 3.4 Everywhere else, we will count pages without asking. This relies on legitimate interests, because nothing is stored on your device.
 
 ## 3 Analytics {#analytics opens=opening status=live}
 
-> In plain words: visitors in Europe are asked first. Elsewhere we count pages without storing anything in your browser.
+> In plain words: analytics does not run for visitors in Europe. Elsewhere we count pages without storing anything in your browser.
 
 3.1 PostHog measures how the site is used while keeping its identifier only in the page's memory. It stores nothing in cookies, local storage or session storage, and every full page load starts a new identifier, so it counts pages and steps, not people[^1]. PostHog is set to discard the IP address before an event is stored.
 
 3.2 This layer does not record your screen and does not identify you.
 
-3.3 If your network address is in the EU, the EEA, the UK or Switzerland, PostHog loads only after you say yes through the line the site shows. Before you answer, and if you say no, nothing is counted or recorded. If we cannot tell where you are, the site asks.
+3.3 If your network address is in the EU, the EEA, the UK or Switzerland, or we cannot tell where you are, we run no analytics at all: PostHog does not load, nothing is counted or recorded, and the site does not ask.
 
 3.4 Everywhere else, we count pages without asking. This relies on legitimate interests, because nothing is stored on your device.
 
@@ -100,11 +101,11 @@ Table: What the site stores in your browser
 
 4.3 We keep recordings for 30 days, then PostHog deletes them[^3].
 
-4.4 You can take back your yes at any time on this page. A control here changes your answer to no, and recording stops at once. In the EU, the EEA, the UK and Switzerland, counting stops too. This page is linked at the foot of every page. A new page load starts a new recording, so nothing follows you from page to page.
+4.4 You can take back your yes at any time on this page. A control here changes your answer to no, and recording stops at once. This page is linked at the foot of every page. A new page load starts a new recording, so nothing follows you from page to page.
 
 4.5 Your answer, yes or no, lasts 6 months. After that the site asks again.
 
-4.6 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask. In the EU, the EEA, the UK and Switzerland that also means PostHog does not load.
+4.6 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask.
 
 4.7 PostHog stores nothing in your browser, so recording adds only this entry.
 
@@ -124,11 +125,11 @@ Table: What recording stores in your browser
 
 4.3 We keep recordings for 30 days, then PostHog deletes them[^3].
 
-4.4 You can take back your yes at any time on this page. A control here changes your answer to no, and recording stops at once. In the EU, the EEA, the UK and Switzerland, counting stops too. This page is linked at the foot of every page. A new page load starts a new recording, so nothing follows you from page to page.
+4.4 You can take back your yes at any time on this page. A control here changes your answer to no, and recording stops at once. This page is linked at the foot of every page. A new page load starts a new recording, so nothing follows you from page to page.
 
 4.5 Your answer, yes or no, lasts 6 months. After that the site asks again.
 
-4.6 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask. In the EU, the EEA, the UK and Switzerland that also means PostHog does not load.
+4.6 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask.
 
 4.7 PostHog stores nothing in your browser, so recording adds only this entry.
 
