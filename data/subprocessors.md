@@ -9,13 +9,14 @@ title: Subprocessors
 summary: The companies that handle personal information for Greypillar, what each does, what it handles, where, and on what terms. Each section has its plain meaning in the margin. If the two differ, the clause governs.
 banner: ""
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: In force
   Effective: On the opening of greypillar.ai
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not yet reviewed by outside counsel.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "PostHog runs only outside the EU, the EEA, the UK and Switzerland."}
   - {version: "1.0", date: "14 November 2026", text: "First published version, in force from the opening of greypillar.ai."}
 sources:
   - {n: 1, text: "Vercel Data Processing Addendum (Vercel Inc., Delaware, 440 N Barranca Ave #4133, Covina, CA, SCCs Modules 1–3 and the UK IDTA)", href: "https://vercel.com/legal/dpa"}
@@ -74,7 +75,7 @@ Table: Subprocessors announced
 | Name | What they will do | Data | Where |
 |---|---|---|---|
 | Hetzner Online GmbH | Hosts Greypillar's intake server, which stores Start requests | Start requests: words, files, name and work email | Helsinki, Finland. Company in Germany[^6][^7] |
-| PostHog, Inc. | Website analytics. In the EU, the EEA, the UK and Switzerland it loads only after a visitor says yes. Elsewhere it counts pages without cookies. Session replay and heatmaps only for visitors who say yes | Page events. Recordings of page use, with text fields masked, for visitors who say yes | EU cloud in Frankfurt, Germany. Company in the United States[^8][^9] |
+| PostHog, Inc. | Website analytics, outside the EU, the EEA, the UK and Switzerland only: it counts pages without cookies. Session replay and heatmaps only for visitors who say yes | Page events. Recordings of page use, with text fields masked, for visitors who say yes | EU cloud in Frankfurt, Germany. Company in the United States[^8][^9] |
 | OpenRouter, Inc. | Would route agents' requests to AI models, only after agents begin to prepare briefs, which Start does not do when it opens | The text of a Start request and text read from its file, while a brief is prepared. OpenRouter keeps token counts and timing, not the text | Company in the United States. The model providers and their countries are not yet named. They are named here, or in the Order Form for customer work, before any use[^10][^12] |
 
 3.2 OpenRouter passes each request to one AI model provider. Before any use, Greypillar names the providers and their countries on this list or in the Order Form. It will then set its account to route only to those providers, and only to those with zero data retention, which OpenRouter defines as no routine storage after processing. OpenRouter states one exception, content flagged as possible child sexual abuse material, which may be kept for review. OpenRouter also screens content in flight[^12].
@@ -90,7 +91,7 @@ Table: Subprocessors for Start and analytics
 | Name | What they do | Data | Where |
 |---|---|---|---|
 | Hetzner Online GmbH | Hosts Greypillar's intake server, which stores Start requests | Start requests: words, files, name and work email | Helsinki, Finland. Company in Germany[^6][^7] |
-| PostHog, Inc. | Website analytics. In the EU, the EEA, the UK and Switzerland it loads only after a visitor says yes. Elsewhere it counts pages without cookies. Session replay and heatmaps only for visitors who say yes | Page events. Recordings of page use, with text fields masked, for visitors who say yes | EU cloud in Frankfurt, Germany. Company in the United States[^8][^9] |
+| PostHog, Inc. | Website analytics, outside the EU, the EEA, the UK and Switzerland only: it counts pages without cookies. Session replay and heatmaps only for visitors who say yes | Page events. Recordings of page use, with text fields masked, for visitors who say yes | EU cloud in Frankfurt, Germany. Company in the United States[^8][^9] |
 
 3.2 OpenRouter, Inc. is announced and handles nothing yet. It would route agents' requests to AI models, only after agents begin to prepare briefs, which Start does not do. The notice date is the day these texts are first published at github.com/Greypillar/policies, and OpenRouter does not start less than 30 days after the day its use is announced here. Before any use, Greypillar names the model providers and their countries on this list or in the Order Form. It will then set its account to route only to those providers, and only to those with zero data retention, which OpenRouter defines as no routine storage after processing. OpenRouter states one exception, content flagged as possible child sexual abuse material, which may be kept for review. OpenRouter also screens content in flight[^12].
 

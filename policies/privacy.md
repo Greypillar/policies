@@ -9,13 +9,14 @@ title: Privacy notice
 summary: How Greypillar handles personal information when you visit greypillar.ai, send a request through Start, or write to us. Each section has its plain meaning in the margin. If the two differ, the clause governs.
 banner: ""
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: In force
   Effective: On the opening of greypillar.ai
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not yet reviewed by outside counsel.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "No analytics for visitors in the EU, the EEA, the UK and Switzerland (6.2, the tables in 3 and 4); when a representative there is appointed (1.5)."}
   - {version: "1.0", date: "14 November 2026", text: "First published version, in force from the opening of greypillar.ai."}
 sources:
   - {n: 1, text: "Personal Data Protection Act B.E. 2562 (2019), unofficial English translation (KMUTT copy)", href: "https://cc.kmutt.ac.th/Files/Act%20Eng/personal-data-protection-act-2019-en.pdf"}
@@ -40,7 +41,7 @@ sources:
 
 1.4 Greypillar is run from Thailand. We treat the Thai Personal Data Protection Act B.E. 2562 (the PDPA) as applying in full to everything we do with personal information, wherever you are[^1].
 
-1.5 Greypillar has not appointed a representative in the EU or the UK yet[^2]. It has not appointed a data protection officer.
+1.5 Greypillar has not appointed a representative in the EU or the UK yet[^2]. It runs no analytics for visitors in the EU, the EEA, the UK or Switzerland and does not market there. It will appoint one before either changes, or before its first customer there. It has not appointed a data protection officer.
 
 1.6 {claim:status.public_service} {claim:status.customers}
 
@@ -67,7 +68,6 @@ Table: What we collect
 | Every visitor | IP address, browser and device type, the address requested, time, and response. These are network and server records | Created by our hosting and network providers when your browser asks for a page |
 | Every visitor, when analytics is switched on | The country your network address is in, so the site knows whether to ask before it counts anything | Worked out when your browser asks for a page |
 | Visitors outside the EU, the EEA, the UK and Switzerland, when analytics is switched on | Pages viewed, the site that sent you, how far you scrolled, where you left, the route from the home page to Start and Send. Nothing is stored in your browser | Measured by PostHog, in its EU cloud. See section 6 |
-| Visitors in the EU, the EEA, the UK or Switzerland who say yes, when analytics is switched on | The same | Measured by PostHog, only after you agree. See section 6 |
 | Visitors who say yes to recording, when analytics is switched on | A recording of how the page was used: pointer movement, clicks, scrolling and the page's structure. What you type is masked and not recorded. Start is never recorded | Recorded by PostHog, only after you agree |
 | Every visitor | The light level you chose. It stays in your browser and is never sent to us | Saved in your browser's local storage. See [Cookies](/legal/cookies) |
 | People who use Start, when it opens | What you write, one file if you add one (with its name, type and size, and a checksum of its contents), your name and your work email | You send it when you press Send |
@@ -92,7 +92,6 @@ Table: What we collect
 | Every visitor | IP address, browser and device type, the address requested, time, and response. These are network and server records | Created by our hosting and network providers when your browser asks for a page |
 | Every visitor | The country your network address is in, so the site knows whether to ask before it counts anything | Worked out when your browser asks for a page |
 | Visitors outside the EU, the EEA, the UK and Switzerland | Pages viewed, the site that sent you, how far you scrolled, where you left, the route from the home page to Start and Send. Nothing is stored in your browser. PostHog is set to discard the IP address | Measured by PostHog, in its EU cloud. See section 6 |
-| Visitors in the EU, the EEA, the UK or Switzerland who say yes | The same | Measured by PostHog, only after you agree. See section 6 |
 | Visitors who say yes to recording | A recording of how the page was used: pointer movement, clicks, scrolling and the page's structure. What you type is masked and not recorded. Start is never recorded | Recorded by PostHog, only after you agree |
 | Every visitor | The light level you chose. It stays in your browser and is never sent to us | Saved in your browser's local storage. See [Cookies](/legal/cookies) |
 | People who use Start | What you write, one file if you add one (with its name, type and size, and a checksum of its contents), your name and your work email | You send it when you press Send |
@@ -116,7 +115,6 @@ Table: Purposes and legal grounds
 |---|---|---|---|
 | Serve the website, keep it running and protect it from abuse | Network and server records | Legitimate interests, Art. 6(1)(f). Our interest is a site that works and resists abuse | Legitimate interests, s.24(5) |
 | Understand, in aggregate, how the site is used by visitors outside the EU, the EEA, the UK and Switzerland | Analytics without cookies | Legitimate interests, Art. 6(1)(f). Our interest is a site people can use | Legitimate interests, s.24(5) |
-| Understand, in aggregate, how the site is used by visitors in the EU, the EEA, the UK and Switzerland | Analytics, only after you say yes | Consent, Art. 6(1)(a) | Consent, s.19 |
 | Improve the website from recordings | Session replay and heatmaps | Consent, Art. 6(1)(a) | Consent, s.19 |
 | Keep Start free of bots and abuse | The bot check result, IP address and browser signals | Legitimate interests, Art. 6(1)(f). Our interest is a form that works and resists abuse | Legitimate interests, s.24(5) |
 | Answer a Start request | What you send through Start | Legitimate interests, Art. 6(1)(f), where you write for your employer or organisation. Our interest is answering the people who write to us. Steps you ask for before a contract, Art. 6(1)(b), where you write for yourself | s.24(5), or s.24(3) where you write for yourself |
@@ -176,11 +174,11 @@ Table: Purposes and legal grounds
 
 ## 6 Analytics and session replay, when switched on {#analytics status=planned until=opening}
 
-> In plain words: analytics is not switched on yet. When it is, visitors in Europe are asked first, we record a visit only if you say yes, and we never record Start.
+> In plain words: analytics is not switched on yet. When it is, it will not run at all for visitors in Europe; elsewhere we record a visit only if you say yes, and we never record Start.
 
 6.1 Analytics is not switched on yet. Today nothing is counted or recorded. When it is, we will use PostHog, in its EU cloud in Frankfurt, Germany, to understand how the site is used. PostHog will keep its identifier only in the page's memory. It stores nothing in your browser, and every full page load starts a new identifier, so we count pages and steps, not people[^3].
 
-6.2 If your network address is in the EU, the EEA, the UK or Switzerland, PostHog will load only after you say yes through the line the site shows. Before you answer, and if you say no, nothing is counted or recorded. If we cannot tell where you are, the site asks.
+6.2 If your network address is in the EU, the EEA, the UK or Switzerland, or we cannot tell where you are, we will run no analytics at all: PostHog does not load, nothing is counted or recorded, and the site does not ask.
 
 6.3 Everywhere else, we will count pages without cookies and without asking, because nothing is stored on your device. We record a visit only if you say yes.
 
@@ -190,21 +188,21 @@ Table: Purposes and legal grounds
 
 6.6 Recordings mask every text field. What you type is not recorded. The Start form is blocked from recording, and the Start page is never recorded, whatever you chose.
 
-6.7 You can take back your yes at any time on the [Cookies](/legal/cookies) page, which is linked at the foot of every page. Recording stops at once. In the EU, the EEA, the UK and Switzerland, counting stops too. Recordings already made are deleted when their keeping period ends, or sooner if you ask and we can find them.
+6.7 You can take back your yes at any time on the [Cookies](/legal/cookies) page, which is linked at the foot of every page. Recording stops at once. Recordings already made are deleted when their keeping period ends, or sooner if you ask and we can find them.
 
 6.8 Your answer, yes or no, lasts 6 months. After that the site asks again.
 
-6.9 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask. In the EU, the EEA, the UK and Switzerland that also means PostHog does not load.
+6.9 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask.
 
 6.10 We use recordings only to improve the website. We do not use them to decide anything about you.
 
 ## 6 Analytics and session replay {#analytics opens=opening status=live}
 
-> In plain words: visitors in Europe are asked before anything is counted. We record a visit only if you say yes, and never on Start.
+> In plain words: analytics does not run at all for visitors in Europe. Elsewhere we record a visit only if you say yes, and never on Start.
 
 6.1 We use PostHog, in its EU cloud in Frankfurt, Germany, to understand how the site is used. PostHog is set to discard the IP address before an event is stored. It keeps its identifier only in the page's memory. It stores nothing in your browser, and every full page load starts a new identifier, so we count pages and steps, not people[^3].
 
-6.2 If your network address is in the EU, the EEA, the UK or Switzerland, PostHog loads only after you say yes through the line the site shows. Before you answer, and if you say no, nothing is counted or recorded. If we cannot tell where you are, the site asks.
+6.2 If your network address is in the EU, the EEA, the UK or Switzerland, or we cannot tell where you are, we run no analytics at all: PostHog does not load, nothing is counted or recorded, and the site does not ask.
 
 6.3 Everywhere else, we count pages without cookies and without asking, because nothing is stored on your device. We record a visit only if you say yes.
 
@@ -214,11 +212,11 @@ Table: Purposes and legal grounds
 
 6.6 Recordings mask every text field. What you type is not recorded. The Start form is blocked from recording, and the Start page is never recorded, whatever you chose.
 
-6.7 You can take back your yes at any time on the [Cookies](/legal/cookies) page, which is linked at the foot of every page. Recording stops at once. In the EU, the EEA, the UK and Switzerland, counting stops too. Recordings already made are deleted when their keeping period ends, or sooner if you ask and we can find them.
+6.7 You can take back your yes at any time on the [Cookies](/legal/cookies) page, which is linked at the foot of every page. Recording stops at once. Recordings already made are deleted when their keeping period ends, or sooner if you ask and we can find them.
 
 6.8 Your answer, yes or no, lasts 6 months. After that the site asks again.
 
-6.9 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask. In the EU, the EEA, the UK and Switzerland that also means PostHog does not load.
+6.9 If your browser sends a Global Privacy Control or Do Not Track signal, we treat it as a no to session replay. Nothing is recorded and the site does not ask.
 
 6.10 We use recordings only to improve the website. We do not use them to decide anything about you.
 

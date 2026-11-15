@@ -8,13 +8,14 @@ title: System card for Greypillar's agents
 summary: What the agents planned for the first step may and may not do, how they are routed, what is known to go wrong, and what has and has not been tested.
 banner: "{claim:status.public_service} No agent handles a visitor's words today. This card describes the design for step 1. Nothing here has been evaluated."
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: Draft
   Effective: Not set
-  Updated: 14 November 2026
+  Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not independently assessed.
   Governing text: English
 changes:
+  - {version: "1.1", date: "15 November 2026", text: "Website analytics do not run for visitors in Europe (4.7)."}
   - {version: "1.0", date: "14 November 2026", text: "First published draft."}
 sources:
   - {n: 1, text: "OpenRouter, the model routing service chosen for step 1", href: "https://openrouter.ai"}
@@ -75,7 +76,7 @@ Table: What the agents may and may not do
 4.4 The intake has no open port to the internet. Only the website's own server function reaches it, through an encrypted Cloudflare tunnel that requires a secret token. Files are stored as received and are never opened on that server; reading a file happens in a sandbox on a separate server.
 4.5 The agents read only the one request they are preparing, read-only, and never the table. They write nothing back to the intake.
 4.6 {claim:data_use.no_training_default} A visitor's words are kept so a workspace can start from them, and deleted on request or after the period in the privacy notice.
-4.7 Website analytics are cookieless and aggregate. In the EU, the EEA, the UK and Switzerland they load only after a visitor says yes. Session replay runs only for visitors who agree, with inputs masked, and Start is never recorded. Replays are kept 30 days. A Global Privacy Control or Do Not Track signal counts as a no to replay.
+4.7 Website analytics are cookieless and aggregate, and do not run at all for visitors in the EU, the EEA, the UK or Switzerland. Session replay runs only for visitors who agree, with inputs masked, and Start is never recorded. Replays are kept 30 days. A Global Privacy Control or Do Not Track signal counts as a no to replay.
 4.8 The agents are not built. The intake that stores requests is deployed when greypillar.ai opens. No agent reads from it until the agents exist.
 
 ## 5 Known limits and failure modes {#limits status=planned}
