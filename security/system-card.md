@@ -8,13 +8,14 @@ title: System card for Greypillar's agents
 summary: What the agents planned for the first step may and may not do, how they are routed, what is known to go wrong, and what has and has not been tested.
 banner: "{claim:status.public_service} No agent handles a visitor's words today. This card describes the design for step 1. Nothing here has been evaluated."
 record:
-  Version: "1.1"
+  Version: "1.2"
   State: Draft
   Effective: Not set
   Updated: 15 November 2026
   Reviewed: Written by Greypillar. Not independently assessed.
   Governing text: English
 changes:
+  - {version: "1.2", date: "15 November 2026", text: "The gate rule is cited at /system (the docs are closed in public until the patent answer)."}
   - {version: "1.1", date: "15 November 2026", text: "Website analytics do not run for visitors in Europe (4.7)."}
   - {version: "1.0", date: "14 November 2026", text: "First published draft."}
 sources:
@@ -65,7 +66,7 @@ Table: What the agents may and may not do
 3.3 A note never changes what is in force. A note can start narrowing, a recheck or attention, nothing else.
 3.4 Accepted is not done. An effect counts as done only when its evidence shows it.
 3.5 A stop is never held beyond the current prepare bound. A stop that was requested stays apart from a stop a receiver confirmed, and each receiver not yet covered is named. A change that would widen anything fails closed.
-3.6 The specification's tests run against a reference model with a defect planted in each, to show the test would catch it. This tests the specification. It does not test any agent. See [the gate rule](/docs/gate-rule) and [commitments](/commitments).
+3.6 The specification's tests run against a reference model with a defect planted in each, to show the test would catch it. This tests the specification. It does not test any agent. See [the gate rule](/system) and [commitments](/commitments).
 
 ## 4 Model routing and data handling {#routing status=planned}
 > In plain words: one route to the models, to providers that say they do not keep or train on what they are sent.
