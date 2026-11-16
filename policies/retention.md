@@ -9,13 +9,14 @@ title: Retention and deletion
 summary: How long Greypillar keeps each kind of record, what happens at the end, and how to ask for deletion sooner. Each section has its plain meaning in the margin. If the two differ, the clause governs.
 banner: ""
 record:
-  Version: "1.0"
+  Version: "1.1"
   State: In force
   Effective: On the opening of greypillar.ai
-  Updated: 14 November 2026
+  Updated: 16 November 2026
   Reviewed: Written by Greypillar. Not yet reviewed by outside counsel.
   Governing text: English
 changes:
+  - {version: "1.1", date: "16 November 2026", text: "Backups (5): from the opening, the Start server is copied daily by Hetzner and each copy is kept 7 days, so a deleted request can remain in a copy for up to 7 days. Published more than 30 days before it takes effect."}
   - {version: "1.0", date: "14 November 2026", text: "First published version, in force from the opening of greypillar.ai."}
 sources:
   - {n: 1, text: "Personal Data Protection Act B.E. 2562 (2019), unofficial English translation (KMUTT copy), sections 33, 34 and 37(3)", href: "https://cc.kmutt.ac.th/Files/Act%20Eng/personal-data-protection-act-2019-en.pdf"}
@@ -102,13 +103,23 @@ Table: Retention schedule for Start and analytics
 
 4.2 If we cannot find a record from what you give us, for example a session replay, we tell you and say what would help us find it.
 
-## 5 Backups {#backups status=planned}
+## 5 Backups {#backups status=planned until=opening}
 
 > In plain words: no backup holds Start material today. If that changes, the period will be stated here first.
 
 5.1 No backup holds Start material today.
 
 5.2 Before any backup holds it, we will state here how long backups are kept. A deleted record will then leave the backups when they expire, and will not be restored into use.
+
+## 5 Backups {#backups opens=opening status=live}
+
+> In plain words: the server that keeps Start requests is copied once a day, and each copy is kept for 7 days. Something we delete can stay in a copy for up to 7 days, then it is gone.
+
+5.1 The server in Helsinki that keeps Start requests is copied whole once a day by its host, Hetzner, and each copy is kept for 7 days. A Start request we delete, when you ask or at the end of its period, can therefore remain in a copy for up to 7 days after we delete it from the server.
+
+5.2 We never restore a deleted record into use. If we ever restore the server from a copy, we first repeat every deletion made after that copy was taken.
+
+5.3 Our other backups do not hold Start material. Before any does, its period will be stated here first.
 
 ## 6 When we must keep something longer {#holds status=live}
 
